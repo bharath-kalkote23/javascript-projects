@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quest Hospital - Patient Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>🏥 Quest Hospital</h1>
+        <h2>Patient Task Manager</h2>
+
+        <div class="form-section">
+            <input type="text" id="patientName" placeholder="Patient Name">
+            <input type="text" id="disease" placeholder="Disease">
+            <input type="time" id="admitTime">
+            <input type="text" id="taskInput" placeholder="Task (e.g., Give Medicine)">
+            <button onclick="addPatientTask()">Add Task</button>
+        </div>
+
+        <div class="task-display">
+            <h3>Patient Records</h3>
+            <ul id="taskList"></ul>
+        </div>
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>

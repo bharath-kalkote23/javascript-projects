@@ -1,0 +1,167 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background 0.5s ease;
+}
+
+/* App Container */
+.app-container {
+    background-color: rgba(34, 34, 34, 0.85);
+    padding: 25px;
+    border-radius: 20px;
+    width: 95%;
+    max-width: 650px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+/* Header */
+.app-header h1 {
+    font-size: 2.2rem;
+    color: #ff8c00;
+}
+
+.app-header p {
+    font-size: 1rem;
+    color: #bbb;
+    margin-bottom: 20px;
+}
+
+/* Search */
+.search-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 12px;
+    border-radius: 25px;
+    border: none;
+    background: #444;
+    color: white;
+    font-size: 1rem;
+    outline: none;
+}
+
+input::placeholder {
+    color: #ccc;
+}
+
+button {
+    padding: 12px 20px;
+    border-radius: 25px;
+    border: none;
+    background: #ff8c00;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #cc6b00;
+}
+
+/* Current Weather */
+.current-weather {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background: #333;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+}
+
+.current-weather .icon img {
+    width: 90px;
+}
+
+.info h2 {
+    font-size: 1.8rem;
+    color: #ff8c00;
+}
+
+.info p {
+    font-size: 1.1rem;
+    color: white;
+    margin-top: 5px;
+}
+
+/* Forecast */
+.forecast {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.day {
+    background: #333;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.weekday {
+    color: #ff8c00;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.day .icon img {
+    width: 55px;
+}
+
+.temp {
+    color: white;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .forecast {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .current-weather {
+        flex-direction: column;
+    }
+}
+
+/* Background Themes */
+body.clear {
+    background-image: url("https://images.unsplash.com/photo-1501973801540-537f08ccae7b");
+}
+
+body.clouds {
+    background-image: url("https://images.unsplash.com/photo-1499346030926-9a72daac6c63");
+}
+
+body.rain {
+    background-image: url("https://images.unsplash.com/photo-1501696461415-6bd6660c6742");
+}
+
+body.snow {
+    background-image: url("https://images.unsplash.com/photo-1608889175123-8ee362201f81");
+}
+
+body.default {
+    background-image: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e");
+}
